@@ -1,22 +1,23 @@
-import React from 'react';
+import React from 'react'
 
 const Item = ({ item }) => {
+  console.log(item)
   return (
-    <article className="Item">
+    <article className='Item'>
       <label htmlFor={item.id}>
         <input
-          type="checkbox"
+          type='checkbox'
           checked={item.packed}
-          onChange={() => {}}
+          onChange={item.toggle}
           id={item.id}
         />
         {item.value}
       </label>
-      <button className="Item-remove" onClick={() => {}}>
+      <button className='Item-remove' onClick={() => {}}>
         Remove
       </button>
     </article>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item
